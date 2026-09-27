@@ -28,6 +28,7 @@ symmetry-fibres/
 ├── code/       ecfp_fibres.py        collision pairs, exhaustive chain check, census, stereo examples (RDKit)
 ├── data/       phiX174.fasta         bacteriophage phiX174, RefSeq NC_001422.1
 ├── results/    ecfp_fibres_output.txt, ecfp_pairs.json
+├── figures/    fig_moves.tex, fig_moves.pdf     Figure 1 (TikZ source and PDF)
 └── README.md, CITATION.cff, requirements.txt, LICENSE (code, MIT), LICENSE-CC-BY-4.0.md (text)
 ```
 
@@ -38,6 +39,8 @@ The φX174 numbers are computed by the verification scripts of the monograph's r
 ```
 cd code
 python -u ecfp_fibres.py     # a few seconds; needs rdkit
+cd ../figures
+pdflatex fig_moves
 cd ../paper
 pdflatex symmetry_fibres
 pdflatex symmetry_fibres
