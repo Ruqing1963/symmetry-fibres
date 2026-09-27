@@ -334,7 +334,7 @@ $r=4$.}\label{tab:pairs}
 \end{table}
 
 Table~\ref{tab:pairs} lists the pairs we checked. The linker-$4$ pair,
-\begin{center}\small
+\begin{center}\footnotesize
 \texttt{CCCCCC(C)CCCCC(Cl)CCCCC(O)CCCCC}\quad and\quad\texttt{CCCCCC(Cl)CCCCC(C)CCCCC(O)CCCCC},
 \end{center}
 has identical ECFP4 in all three forms, and the two molecules place their pharmacophoric groups differently:
@@ -413,6 +413,7 @@ molecular property on the collision pairs: whether the linker-$4$ pair differs i
 question. What is settled is that no model reading ECFP4 can predict such a difference.
 
 \section*{Data and code availability}
+\sloppy
 \texttt{code/ecfp\_fibres.py} (Python, RDKit 2026.03.6) reproduces Section~\ref{sec:ecfp}: the collision pairs and
 their fingerprints at radii $1$--$4$, the pharmacophore distances, the exhaustive check of
 Theorem~\ref{thm:chain} for $N=9$ and the census, and the stereochemical examples; its transcript is
