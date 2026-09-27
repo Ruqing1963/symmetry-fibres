@@ -7,7 +7,7 @@ Zhengyi Chen<sup>1</sup> and Ruqing Chen<sup>2</sup>
 <sup>1</sup> Guangxi Key Laboratory of Drug Discovery and Optimization, Guangxi Engineering Research Center for Pharmaceutical Molecular Screening and Druggability Evaluation, School of Pharmacy, Guilin Medical University, Guilin 541199, P. R. China (chenzhengyi@glmc.edu.cn)
 <sup>2</sup> GUT Geoservice Inc., Montreal, Québec, Canada (ruqing@hotmail.com)
 
-DOI: to be assigned (Zenodo)
+DOI: [10.5281/zenodo.23002923](https://doi.org/10.5281/zenodo.23002923)
 
 ## About
 
@@ -44,6 +44,20 @@ pdflatex symmetry_fibres
 ```
 
 Tested with Python 3.12 and RDKit 2026.03.6.
+
+## How to cite
+
+```bibtex
+@misc{ChenChen2026SymmetryFibres,
+  author    = {Chen, Zhengyi and Chen, Ruqing},
+  title     = {Symmetry-constrained spectral fibres: reverse-complement group actions on
+               double-stranded DNA and the fibres of circular molecular fingerprints},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23002923},
+  url       = {https://doi.org/10.5281/zenodo.23002923}
+}
+```
 
 ## License
 

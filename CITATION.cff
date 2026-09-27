@@ -1,0 +1,78 @@
+cff-version: 1.2.0
+message: "If you use this paper or its code, please cite it as below."
+title: "Symmetry-constrained spectral fibres: reverse-complement group actions on double-stranded DNA and the fibres of circular molecular fingerprints"
+abstract: >-
+  A strand-agnostic local DNA encoder is constant on the double-stranded fibre, a lattice sum of
+  BEST determinants that is #P-hard to evaluate (31,925,753,246,212 members for phiX174 at k = 10).
+  On substituted linear chains the radius-r Morgan (ECFP) partition equals the reversal-symmetric
+  window spectrum with the substituent at distance r coarsened to its atom type, verified
+  exhaustively with RDKit; distinct molecules with identical ECFP4 and ECFP6 are constructed, with
+  the bound on the linker length attained.
+type: software
+authors:
+  - family-names: Chen
+    given-names: Zhengyi
+    email: chenzhengyi@glmc.edu.cn
+    affiliation: "School of Pharmacy, Guilin Medical University, Guilin, China"
+  - family-names: Chen
+    given-names: Ruqing
+    email: ruqing@hotmail.com
+    affiliation: "GUT Geoservice Inc., Montreal, Canada"
+doi: 10.5281/zenodo.23002923
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23002923
+    description: "Zenodo archive of the paper, code and data"
+repository-code: "https://github.com/Ruqing1963/symmetry-fibres"
+url: "https://doi.org/10.5281/zenodo.23002923"
+date-released: 2026-09-27
+version: 1.0.0
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - reverse complement
+  - double-stranded DNA
+  - de Bruijn graph
+  - BEST theorem
+  - lattice sum
+  - phiX174
+  - extended-connectivity fingerprint
+  - Morgan algorithm
+  - Weisfeiler-Lehman
+  - spectral fibre
+  - RDKit
+references:
+  - type: book
+    title: "Algebraic Genomics: The Combinatorics of Sequence Reconstruction and Representation"
+    authors:
+      - family-names: Chen
+        given-names: Ruqing
+    doi: 10.5281/zenodo.22943487
+    publisher:
+      name: Zenodo
+    year: 2026
+  - type: report
+    title: "What a local encoder cannot see: spectral fibres of the human proteome and the representation of perturbagens"
+    authors:
+      - family-names: Chen
+        given-names: Zhengyi
+      - family-names: Chen
+        given-names: Ruqing
+    doi: 10.5281/zenodo.22950095
+    publisher:
+      name: Zenodo
+    year: 2026
+preferred-citation:
+  type: article
+  title: "Symmetry-constrained spectral fibres: reverse-complement group actions on double-stranded DNA and the fibres of circular molecular fingerprints"
+  authors:
+    - family-names: Chen
+      given-names: Zhengyi
+    - family-names: Chen
+      given-names: Ruqing
+  doi: 10.5281/zenodo.23002923
+  publisher:
+    name: Zenodo
+  year: 2026
+  url: "https://doi.org/10.5281/zenodo.23002923"

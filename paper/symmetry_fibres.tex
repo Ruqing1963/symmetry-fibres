@@ -45,7 +45,7 @@ Guilin 541199, P.~R.~China\\
 Ruqing Chen\\[2pt]
 \normalsize GUT Geoservice Inc., Montreal, Qu\'ebec, Canada\\
 \normalsize\texttt{ruqing@hotmail.com}}
-\date{27 September 2026}
+\date{27 September 2026\\[4pt]\small DOI: \href{https://doi.org/10.5281/zenodo.23002923}{10.5281/zenodo.23002923}}
 
 \begin{document}
 \maketitle
@@ -173,7 +173,7 @@ $D_k$ is therefore an upper bound that is astronomically loose (Section~\ref{sec
 \paragraph{Moves.} On one strand, fibre members differ by transpositions of segments between repeated
 $k$-mers \cite{Ukk92,Pev95}. On two strands there is a second move: a segment flanked by an inverted repeat
 $w\cdots\rho w$ may be replaced by its reverse complement without changing the double-stranded spectrum
-\cite[Thm.~11.1]{AG}. Transpositions between direct repeats and inversions between inverted repeats are the two
+\cite[Thm.~11.1]{AG} (Figure~\ref{fig:moves}a). Transpositions between direct repeats and inversions between inverted repeats are the two
 products of non-allelic homologous recombination, so a strand-agnostic local encoder is blind to exactly the
 rearrangements that recombination between repeats of length $k$ produces. Whether the two moves together with
 $\rho$ connect every double-stranded fibre is conjectured, and proved for the palindromic genomes of
@@ -272,6 +272,13 @@ $\Omega_r(s)$, and conversely determines it because the round-$r$ identifiers of
 on window classes.
 \end{proof}
 
+The coarsening at distance $r$ has a plain geometric reading. The radius-$r$ environment of the chain carbon $i$
+is the ball of graph radius $r$ around it. It contains the chain carbon $i\pm r$, and so records that carbon's
+degree and hydrogen count, i.e.\ whether it is a $\mathrm{CH_2}$ or a substituted $\mathrm{CHX}$. The halogen
+attached to carbon $i\pm r$, however, lies at graph distance $r+1$ from $i$ (the path $i\to\cdots\to i\pm r\to
+\mathrm X$ has $r+1$ bonds) and is outside the ball. The environment therefore knows that a substituent is
+there but not which one, exactly as $\bar s_{i\pm r}$ records.
+
 We verified the theorem by enumerating all $3^9=19\,683$ strings with $N=9$ ($9\,963$ distinct molecules),
 computing the unhashed count fingerprint with RDKit \cite{RDKit} for $r=1,2,3$, and comparing the resulting
 partition with the partition by $\Omega_r$: they coincide exactly at all three radii. The census in
@@ -338,7 +345,64 @@ $\ell\ge2r-1$ of Proposition~\ref{prop:linker} is attained: $\ell=4$ separates a
 $r=4$.}\label{tab:pairs}
 \end{table}
 
-Table~\ref{tab:pairs} lists the pairs we checked. The linker-$4$ pair,
+\begin{figure}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[font=\small,
+  seg/.style={draw, minimum height=0.5cm, inner sep=3pt, font=\footnotesize},
+  rep/.style={seg, fill=gray!25},
+  inv/.style={seg, fill=orange!25},
+  atom/.style={draw, rounded corners=2pt, minimum height=0.5cm, inner sep=2.5pt, font=\footnotesize},
+  lnk/.style={atom, fill=gray!15},
+  lab/.style={font=\footnotesize, align=left, anchor=west}]
+% ---------------- (a) inversion flip between an inverted repeat
+\node[anchor=west, font=\bfseries\footnotesize] at (-0.6,3.6) {(a)};
+\node[anchor=east, font=\footnotesize] at (0.0,3.0) {$S$};
+\node[seg, minimum width=1.2cm] (a1) at (0.8,3.0) {$\cdots$};
+\node[rep] (w1) at (2.05,3.0) {$w$};
+\node[inv, minimum width=2.2cm] (x1) at (3.65,3.0) {$X$};
+\node[rep] (rw1) at (5.3,3.0) {$\rho(w)$};
+\node[seg, minimum width=1.2cm] (a2) at (6.6,3.0) {$\cdots$};
+\node[anchor=east, font=\footnotesize] at (0.0,1.9) {$T$};
+\node[seg, minimum width=1.2cm] at (0.8,1.9) {$\cdots$};
+\node[rep] at (2.05,1.9) {$w$};
+\node[inv, minimum width=2.2cm] at (3.65,1.9) {$\rho(X)$};
+\node[rep] at (5.3,1.9) {$\rho(w)$};
+\node[seg, minimum width=1.2cm] at (6.6,1.9) {$\cdots$};
+\draw[-{Stealth[length=2mm]}, thick] (3.65,2.72) -- (3.65,2.18);
+\node[lab, text width=7.6cm] at (7.4,2.45) {inversion between the inverted repeat $w\cdots\rho(w)$:
+  $\spec_{k+1}(T)+\spec_{k+1}(\rho T)=\spec_{k+1}(S)+\spec_{k+1}(\rho S)$ for $|w|\ge k$, although a
+  one-strand $(k+1)$-spectrum changes; so $T\in\DS(S,k)$};
+% ---------------- (b) exchange across repeated linkers
+\node[anchor=west, font=\bfseries\footnotesize] at (-0.6,0.9) {(b)};
+\foreach \y/\X/\Y in {0.3/CH(CH$_3$)/CHCl, -0.9/CHCl/CH(CH$_3$)} {
+  \node[atom] at (0.5,\y) {CH$_3$};
+  \node[lnk] at (1.75,\y) {(CH$_2$)$_4$};
+  \node[atom, fill=orange!25] at (3.15,\y) {\X};
+  \node[lnk] at (4.55,\y) {(CH$_2$)$_4$};
+  \node[atom, fill=orange!25] at (5.9,\y) {\Y};
+  \node[lnk] at (7.25,\y) {(CH$_2$)$_4$};
+  \node[atom] at (8.55,\y) {CH(OH)};
+  \node[lnk] at (9.9,\y) {(CH$_2$)$_4$};
+  \node[atom] at (11.1,\y) {CH$_3$};
+}
+\draw[-{Stealth[length=2mm]}, thick] (4.55,0.02) -- (4.55,-0.62);
+% a radius-2 ball around the CHCl carbon of the first molecule
+\draw[blue!60!black, thick, rounded corners=3pt] (5.2,-0.05) rectangle (6.6,0.65);
+\node[font=\scriptsize, blue!60!black, anchor=south] at (5.9,0.66) {radius-2 environment: inside (CH$_2$)$_4$--CHCl--(CH$_2$)$_4$};
+\node[lab, text width=14.6cm] at (-0.2,-1.85) {exchange of X and Y across identical linkers of length
+  $\ell=4\ge2r-1$: every radius-2 environment is preserved, so ECFP4 (bits, counts, unhashed) is identical;
+  the topological distance Cl$\cdots$OH is $7$ bonds in the upper molecule and $12$ in the lower one.};
+\end{tikzpicture}}
+\caption{Fibre-preserving moves under a symmetry. (a)~On double-stranded DNA, a segment $X$ flanked by an
+inverted repeat $w\cdots\rho(w)$ may be replaced by its reverse complement. The double-stranded $(k+1)$-mer
+spectrum is unchanged, so every strand-agnostic local encoder of order $k+1$ gives $S$ and $T$ the same output
+\cite[Thm.~11.1]{AG}. (b)~The linker-$4$ pair of Table~\ref{tab:pairs}. Exchanging the two substituted carbons
+across identical $(\mathrm{CH_2})_4$ linkers preserves every radius-$2$ atom environment; the two molecules are
+distinct and place the chlorine and the hydroxyl at different distances.}\label{fig:moves}
+\end{figure}
+
+Table~\ref{tab:pairs} lists the pairs we checked, and Figure~\ref{fig:moves}b shows the first. The linker-$4$ pair,
 \begin{center}\footnotesize
 \texttt{CCCCCC(C)CCCCC(Cl)CCCCC(O)CCCCC}\quad and\quad\texttt{CCCCCC(Cl)CCCCC(C)CCCCC(O)CCCCC},
 \end{center}
@@ -426,7 +490,7 @@ Theorem~\ref{thm:chain} for $N=9$ and the census, and the stereochemical example
 verification scripts of the monograph's repository (\texttt{ds\_lattice.py}, \texttt{ds\_flips.py},
 \texttt{ds\_fermion.py}, \texttt{ds\_count.py} at \url{https://github.com/Ruqing1963/algebraic-genomics}), whose
 transcripts we quote. The genome (NC\_001422.1) is included. Code, data and this paper are at
-\url{https://github.com/Ruqing1963/symmetry-fibres}.
+\url{https://github.com/Ruqing1963/symmetry-fibres} and are archived at \doi{10.5281/zenodo.23002923}.
 
 \section*{Funding}
 This project was supported by the National Natural Science Foundation of China (No.~22464010), the
