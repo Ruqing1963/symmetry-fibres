@@ -1,0 +1,2 @@
+# ecfp_fibres.py (tested with RDKit 2026.03.6)
+rdkit

@@ -1,0 +1,220 @@
+{
+ "A": [
+  {
+   "name": "linker (CH2)_4, X=CH(CH3), Y=CHCl, Z=CH(OH)",
+   "smiles": [
+    "CCCCCC(C)CCCCC(Cl)CCCCC(O)CCCCC",
+    "CCCCCC(O)CCCCC(C)CCCCC(Cl)CCCCC"
+   ],
+   "same_molecule": false,
+   "atoms": 24,
+   "radius": {
+    "1": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "3": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    },
+    "4": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  },
+  {
+   "name": "linker (CH2)_5, X=CH(CH3), Y=CHCl, Z=CH(OH)",
+   "smiles": [
+    "CCCCCCC(C)CCCCCC(Cl)CCCCCC(O)CCCCCC",
+    "CCCCCCC(O)CCCCCC(C)CCCCCC(Cl)CCCCCC"
+   ],
+   "same_molecule": false,
+   "atoms": 28,
+   "radius": {
+    "1": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "3": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "4": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  },
+  {
+   "name": "linker (CH2)_6, X=CH(CH3), Y=CHCl, Z=CH(OH)",
+   "smiles": [
+    "CCCCCCCC(C)CCCCCCC(Cl)CCCCCCC(O)CCCCCCC",
+    "CCCCCCCC(O)CCCCCCC(C)CCCCCCC(Cl)CCCCCCC"
+   ],
+   "same_molecule": false,
+   "atoms": 32,
+   "radius": {
+    "1": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "3": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "4": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  },
+  {
+   "name": "macrocycle, cyclic order X Y Z W vs X Z Y W, linkers (CH2)_4",
+   "smiles": [
+    "CC1CCCCCCCCCC(Br)CCCCC(O)CCCCC(Cl)CCCC1",
+    "CC1CCCCCCCCCC(Br)CCCCC(Cl)CCCCC(O)CCCC1"
+   ],
+   "same_molecule": false,
+   "atoms": 29,
+   "radius": {
+    "1": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "3": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    },
+    "4": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  }
+ ],
+ "B": {
+  "1": {
+   "classes": 2729,
+   "partition_equals_window_spectrum": true,
+   "collision_classes": 1910,
+   "molecules_in_collisions": 9144,
+   "molecules": 9963,
+   "largest_class": 60
+  },
+  "2": {
+   "classes": 9803,
+   "partition_equals_window_spectrum": true,
+   "collision_classes": 158,
+   "molecules_in_collisions": 318,
+   "molecules": 9963,
+   "largest_class": 3
+  },
+  "3": {
+   "classes": 9963,
+   "partition_equals_window_spectrum": true,
+   "collision_classes": 0,
+   "molecules_in_collisions": 0,
+   "molecules": 9963,
+   "largest_class": 0
+  }
+ },
+ "C": [
+  {
+   "name": "L-alanine vs D-alanine, achiral fingerprint",
+   "smiles": [
+    "C[C@H](N)C(=O)O",
+    "C[C@@H](N)C(=O)O"
+   ],
+   "same_molecule": false,
+   "atoms": 6,
+   "radius": {
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    }
+   }
+  },
+  {
+   "name": "L-alanine vs D-alanine, chiral fingerprint",
+   "smiles": [
+    "C[C@H](N)C(=O)O",
+    "C[C@@H](N)C(=O)O"
+   ],
+   "same_molecule": false,
+   "atoms": 6,
+   "radius": {
+    "2": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  },
+  {
+   "name": "(E)- vs (Z)-2-butene, achiral fingerprint",
+   "smiles": [
+    "C/C=C/C",
+    "C/C=C\\C"
+   ],
+   "same_molecule": false,
+   "atoms": 4,
+   "radius": {
+    "2": {
+     "bits2048": true,
+     "counts2048": true,
+     "unhashed": true
+    }
+   }
+  },
+  {
+   "name": "(E)- vs (Z)-2-butene, chiral fingerprint",
+   "smiles": [
+    "C/C=C/C",
+    "C/C=C\\C"
+   ],
+   "same_molecule": false,
+   "atoms": 4,
+   "radius": {
+    "2": {
+     "bits2048": false,
+     "counts2048": false,
+     "unhashed": false
+    }
+   }
+  }
+ ]
+}

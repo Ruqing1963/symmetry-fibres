@@ -1,0 +1,21 @@
+# LaTeX by-products
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+# Python
+__pycache__/
+*.pyc
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+# partial download
+*.part
+# not for publication
+paper/cover_letter.txt
+# review prompts, not for publication
+ai_studio_code*.txt

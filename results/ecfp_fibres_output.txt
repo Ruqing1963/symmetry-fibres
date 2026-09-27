@@ -1,0 +1,45 @@
+RDKit 2026.03.6
+
+=== (A) explicit collision pairs: A-u-X-u-Y-u-Z-u-B with X and Y exchanged ===
+    linker (CH2)_4, X=CH(CH3), Y=CHCl, Z=CH(OH): CCCCCC(C)CCCCC(Cl)CCCCC(O)CCCCC  vs  CCCCCC(O)CCCCC(C)CCCCC(Cl)CCCCC   same molecule: False
+        radius 1 (ECFP2): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 3 (ECFP6): 2048-bit False, counts False, unhashed identifier multiset False
+        radius 4 (ECFP8): 2048-bit False, counts False, unhashed identifier multiset False
+    linker (CH2)_5, X=CH(CH3), Y=CHCl, Z=CH(OH): CCCCCCC(C)CCCCCC(Cl)CCCCCC(O)CCCCCC  vs  CCCCCCC(O)CCCCCC(C)CCCCCC(Cl)CCCCCC   same molecule: False
+        radius 1 (ECFP2): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 3 (ECFP6): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 4 (ECFP8): 2048-bit False, counts False, unhashed identifier multiset False
+    linker (CH2)_6, X=CH(CH3), Y=CHCl, Z=CH(OH): CCCCCCCC(C)CCCCCCC(Cl)CCCCCCC(O)CCCCCCC  vs  CCCCCCCC(O)CCCCCCC(C)CCCCCCC(Cl)CCCCCCC   same molecule: False
+        radius 1 (ECFP2): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 3 (ECFP6): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 4 (ECFP8): 2048-bit False, counts False, unhashed identifier multiset False
+    macrocycle, cyclic order X Y Z W vs X Z Y W, linkers (CH2)_4: CC1CCCCCCCCCC(Br)CCCCC(O)CCCCC(Cl)CCCC1  vs  CC1CCCCCCCCCC(Br)CCCCC(Cl)CCCCC(O)CCCC1   same molecule: False
+        radius 1 (ECFP2): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 3 (ECFP6): 2048-bit True, counts True, unhashed identifier multiset True
+        radius 4 (ECFP8): 2048-bit False, counts False, unhashed identifier multiset False
+    topological (shortest-path) distances between the substituent heteroatoms, linker (CH2)_4:
+        order X Y Z: d(CH3, Cl) = 7, d(Cl, OH) = 7, d(CH3, OH) = 12 bonds
+        order Y X Z: d(CH3, Cl) = 7, d(Cl, OH) = 12, d(CH3, OH) = 7 bonds
+
+=== (B) substituted chains CH3-(CHR)_9-CH3, R in {H, F, Cl}: 19683 strings, 9963 distinct molecules (strings up to reversal) ===
+    predicted partition: multiset of radius-r windows read up to reversal, full letters within distance
+    r-1 and CHF = CHCl at distance r (an identifier sees a neighbour's substituent one round later)
+    radius 1: 2729 fingerprint classes; partition equals the reversal-symmetric 3-window spectrum: True; classes with >= 2 distinct molecules: 1910, covering 9144 of 9963 molecules; largest class 60 molecules [1s]
+        e.g. CC(F)C(Cl)C(Cl)C(Cl)CC(F)C(F)C(F)C(C)Cl | CC(F)C(Cl)C(Cl)C(F)C(Cl)CC(F)C(F)C(C)Cl | CC(F)C(Cl)C(Cl)C(F)C(F)C(Cl)CC(F)C(C)Cl | CC(F)C(Cl)C(Cl)C(F)C(F)C(F)CC(Cl)C(C)Cl
+    radius 2: 9803 fingerprint classes; partition equals the reversal-symmetric 5-window spectrum: True; classes with >= 2 distinct molecules: 158, covering 318 of 9963 molecules; largest class 3 molecules [1s]
+        e.g. CC(F)C(F)C(F)C(Cl)C(F)C(F)C(F)C(F)C(C)Cl | CC(F)C(F)C(F)C(F)C(Cl)C(F)C(F)C(F)C(C)Cl | CC(F)C(F)C(F)C(F)C(F)C(Cl)C(F)C(F)C(C)Cl
+    radius 3: 9963 fingerprint classes; partition equals the reversal-symmetric 7-window spectrum: True; classes with >= 2 distinct molecules: 0, covering 0 of 9963 molecules; largest class 0 molecules [1s]
+
+=== (C) stereoisomers ===
+    L-alanine vs D-alanine, achiral fingerprint: C[C@H](N)C(=O)O  vs  C[C@@H](N)C(=O)O   same molecule: False
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+    L-alanine vs D-alanine, chiral fingerprint: C[C@H](N)C(=O)O  vs  C[C@@H](N)C(=O)O   same molecule: False
+        radius 2 (ECFP4): 2048-bit False, counts False, unhashed identifier multiset False
+    (E)- vs (Z)-2-butene, achiral fingerprint: C/C=C/C  vs  C/C=C\C   same molecule: False
+        radius 2 (ECFP4): 2048-bit True, counts True, unhashed identifier multiset True
+    (E)- vs (Z)-2-butene, chiral fingerprint: C/C=C/C  vs  C/C=C\C   same molecule: False
+        radius 2 (ECFP4): 2048-bit False, counts False, unhashed identifier multiset False
